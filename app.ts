@@ -1,13 +1,14 @@
 import dotenv from 'dotenv';
-dotenv.config();
-
 import express from 'express';
+import authRoutes from './src/routes/authRoutes';
 
 const app = express();
-
+dotenv.config();
 app.use(express.json());
 
 //routes
+
+app.use('/auth', authRoutes);
 
 //autenticacion
 
